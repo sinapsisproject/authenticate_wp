@@ -57,6 +57,7 @@ if(count($errors) > 0){
                        
                         update_option('tokensinapsisplatform', $response->token);
                         update_option('idusersinapsisplatform', $response->id);
+                        update_option('namesinapsisplatform' , $response->nombre);
 
                         wp_send_json(array(
                             'status' => true,
@@ -88,6 +89,7 @@ if(count($errors) > 0){
 
                        update_option('tokensinapsisplatform', $response->token);
                        update_option('idusersinapsisplatform', $response->id);
+                       update_option('namesinapsisplatform' , $response->nombre);
 
                         wp_send_json(array(
                             'status' => true,

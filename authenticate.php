@@ -66,6 +66,13 @@ function ajax_enqueue_scripts() {
     rand(0, 99)
     );
 
+    wp_enqueue_style( 
+    'authenticate-css-sinapsis',
+    plugins_url( '/public/css/authenticate.css', __FILE__ ),
+    array(),
+    rand(0, 99)
+    );
+
 
     wp_localize_script(
         'register-form',
@@ -85,7 +92,7 @@ function shortcode_aunthenticate($atts){
         include 'public/partials/authenticate.php'; 
     }else{
         include 'public/partials/profile.php';
-        include 'public/partials/logout.php'; 
+        //include 'public/partials/logout.php'; 
     }
 }
 

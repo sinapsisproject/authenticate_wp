@@ -1,1 +1,0 @@
-<button id="logout_button" type="button" class="btn">Cerrar sesión</button>

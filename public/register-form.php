@@ -59,20 +59,39 @@ if(count($errors) > 0){
 
     if($response->status == true){
 
-        $user_id = wp_insert_user($user_data);
+        $response_login = RfCoreUtils::login_user($email , $password);
 
-        clean_user_cache($user_id);
-        wp_clear_auth_cookie();
-        wp_set_current_user($user_id);
-        wp_set_auth_cookie($user_id, true, false);
-        update_user_caches($user_id);
+        if($response_login->status == true){
 
-        session_start();
+            $user_id = wp_insert_user($user_data);
 
-        wp_send_json( array(
-            'status' => true,
-            'response' => $user_id
-        ));
+            clean_user_cache($user_id);
+            wp_clear_auth_cookie();
+            wp_set_current_user($user_id);
+            wp_set_auth_cookie($user_id, true, false);
+            update_user_caches($user_id);
+
+            update_option('tokensinapsisplatform', $response_login->token);
+            update_option('idusersinapsisplatform', $response_login->id);
+            update_option('namesinapsisplatform', $response_login->nombre);
+
+            wp_send_json( array(
+                'status' => true,
+                'response' => $user_id
+            ));
+
+        }else{
+            array_push($errors, ['id' => 'other' , 'text' => $response_login->msg]);
+
+            wp_send_json(array(
+                'status' => false,
+                'errors' => $errors
+            ));
+        }
+
+
+
+        
 
     }else{
         array_push($errors, ['id' => 'other' , 'text' => $response->msg]);

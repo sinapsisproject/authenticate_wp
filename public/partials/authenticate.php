@@ -88,6 +88,7 @@
 
 
 
-
-<button id="login_button" type="button" class="btn">Iniciar sesión</button>
-<button id="register_button" type="button" class="btn">Crear cuenta</button>
+<div class="col-12" style="text-align: right;">
+  <button style="background: #FFFFFF; color: #445AFF; border-width: 0px;" id="login_button" type="button" class="btn">Iniciar sesión</button>
+  <button id="register_button" type="button" class="btn">Crear cuenta</button>
+</div>

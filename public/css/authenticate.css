@@ -1,0 +1,4 @@
+.modal-backdrop{
+    z-index: 0;
+    opacity: 0 !important;
+}

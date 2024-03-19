@@ -22,4 +22,11 @@ jQuery(document).ready( function(){
 
     })
 
+    jQuery("#perfil_button").on('click', function(){
+
+        window.location.href = '/perfil';
+
+    })
+
+
 });
