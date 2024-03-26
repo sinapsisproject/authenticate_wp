@@ -32,7 +32,7 @@ jQuery(document).ready( function(){
                     jQuery('[id*="_login_error"]').html("");
 
                     response.errors.forEach(element => {
-                       jQuery("#"+element.id+"_login_error").html("<p style='color : red'>"+element.text+"</p>");
+                       jQuery("#"+element.id+"_login_error").html("<p style='color : #FF0000;'>"+element.text+"</p>");
                     });
                 }else if(response.status == true){
                     jQuery('#modalLogin').modal('hide');

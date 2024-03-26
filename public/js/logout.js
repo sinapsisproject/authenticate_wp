@@ -13,10 +13,10 @@ jQuery(document).ready( function(){
                 location.reload();
             },
             beforeSend: function (qXHR, settings) {
-                jQuery('#loading_login').fadeIn();
+                jQuery('#loading_logout').fadeIn();
             },
             complete: function () {
-                jQuery('#loading_login').fadeOut();
+                jQuery('#loading_logout').fadeOut();
             },
         })
 

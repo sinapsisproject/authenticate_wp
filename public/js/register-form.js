@@ -9,6 +9,7 @@ jQuery(document).ready( function(){
         
         nombre       = jQuery('#name_register').val();
         email        = jQuery('#email_register').val();
+        birthdate    = jQuery('#birthdate').val();
         phone        = jQuery('#phone_register').val();
         password     = jQuery('#password_register').val();
 
@@ -16,6 +17,7 @@ jQuery(document).ready( function(){
         data = {
             "name"      : nombre,
             "email"     : email,
+            "birthdate" : birthdate,
             "phone"     : phone,
             "password"  : password
         }

@@ -6,18 +6,18 @@ $errors = array();
 $rememberme = $_POST["rememberme_login"];
 
 if($_POST["email"] == ''){
-    array_push($errors, ['id' => 'email' , 'text' => 'El correo es requerido']);
+    array_push($errors, ['id' => 'email' , 'text' => 'El campo correo electrónico es requerido.']);
 }else if(strlen($_POST["email"]) > 0 && sanitize_email($_POST["email"]) == ''){
-    array_push($errors, ['id' => 'email' , 'text' => 'El correo no es válido']);
+    array_push($errors, ['id' => 'email' , 'text' => 'El correo electrónico no es válido']);
 }else{
     $email  = sanitize_email($_POST["email"]);
 }
 
 
 if(esc_attr($_POST["password"]) == ''){
-    array_push($errors, ['id' => 'password' , 'text' => 'El password es requerido']);
+    array_push($errors, ['id' => 'password' , 'text' => 'El campo contraseña es requerido.']);
 }else if(strlen(esc_attr($_POST["password"])) > 0 && strlen(esc_attr($_POST["password"])) <= 5){
-    array_push($errors, ['id' => 'password' , 'text' => 'Contraseña debe tener más de 5 caracteres']);
+    array_push($errors, ['id' => 'password' , 'text' => 'La contraseña debe tener más de 5 caracteres']);
 }else{
     $password   = esc_attr($_POST["password"]);
 }
