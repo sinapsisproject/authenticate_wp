@@ -1,6 +1,6 @@
 jQuery(document).ready( function(){
 
-    jQuery("#login_button").on('click', function(){
+    jQuery(".login_button").on('click', function(event){
         jQuery('#modalLogin').modal('show');
     })
 

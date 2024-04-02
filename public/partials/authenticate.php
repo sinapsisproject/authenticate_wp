@@ -103,13 +103,16 @@
         </div> -->
 
       </div>
-      <div class="col-12 pt-3 pb-5 px-lg-5">
+      <div class="col-12 pt-3 px-lg-5 text-center">
         <button style="width: 100%;" id="register_data_button" type="button" class="btn btn-primary">
         <div id="loading_register" style="width: 1rem; height: 1rem; margin-right: 6px; display: none;" class="spinner-border" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
         Registrar
         </button>
+      </div>
+      <div class="col-12 text-center pb-5 pt-2">
+        ¿Ya tienes una cuenta? <a style="cursor: pointer; background: #FFFFFF; color: #445AFF; border-width: 0px;" class="login_button" data-bs-dismiss="modal" data-bs-target="#modalRegister">Inicia sesión</a>
       </div>
     </div>
   </div>
@@ -118,6 +121,6 @@
 
 
 <div class="col-12" style="text-align: right;">
-  <a style="background: #FFFFFF; color: #445AFF; border-width: 0px;" id="login_button" type="button" class="btn">Iniciar sesión</a>
+  <a style="background: #FFFFFF; color: #445AFF; border-width: 0px;" class="login_button" type="button" class="btn">Iniciar sesión</a>
   <button id="register_button" type="button" class="btn">Crear cuenta</button>
 </div>
