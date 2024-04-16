@@ -1,6 +1,6 @@
 .modal-backdrop{
     z-index: 0;
-    opacity: 0 !important;
+    opacity: 0;
 }
 
 .modal-title{

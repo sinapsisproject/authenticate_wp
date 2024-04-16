@@ -81,6 +81,7 @@ if(count($errors) > 0){
             update_option('tokensinapsisplatform', $response_login->token);
             update_option('idusersinapsisplatform', $response_login->id);
             update_option('namesinapsisplatform', $response_login->nombre);
+            update_option('emailsinapsisplatform', $response_login->email);
 
             wp_send_json( array(
                 'status' => true,
