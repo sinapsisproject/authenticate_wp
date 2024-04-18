@@ -1,5 +1,6 @@
 jQuery(document).ready( function(){
 
+
     jQuery("#logout_button").on('click', function(){
 
         jQuery.ajax({
