@@ -8,6 +8,7 @@
       </div> -->
 
       <div class="col-12 text-center mt-4 mb-4">
+        <a class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></a>
         <h4 class="modal-title">Iniciar Sesión</h4>
       </div>
 
@@ -28,25 +29,36 @@
           <div id="password_login_error"></div>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="rememberme_login">
-          Recuerdame
+          <div class="row">
+            <div class="col-6">
+              <input class="form-check-input" type="checkbox" value="" id="rememberme_login">
+              Recuerdame
+            </div>
+            <div class="col-6 text-end">
+              <strong><a style="color: black;" href="">Olvidé mi contraseña</a></strong>
+            </div>
+          </div>
         </div>
-
-        <!-- <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div> -->
 
       </div>
 
-      <div class="col-12 pt-3 pb-5 px-lg-5">
+      <div class="col-12 pt-3 pb-3 px-lg-5">
         <button style="width: 100%;" id="login_data_button" type="button" class="btn btn-primary">
         <div id="loading_login" style="width: 1rem; height: 1rem; margin-right: 6px; display: none;" class="spinner-border" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
-        Ingresar
+        Iniciar sesión
         </button>
       </div>
+      
+      <div class="col-12 modal-body">
+        <hr>
+      </div>
+      
+      <div class="col-12 text-center mt-1 mb-4">
+        <strong><label>¿No tienes una cuenta? </label></strong> <label id="register_button" data-bs-dismiss="modal" data-bs-target="#modalLogin" style="color: #445AFF; cursor: pointer;"> Registrate</label>
+      </div>
+      
 
       
     </div>
@@ -57,12 +69,8 @@
 <div id="modalRegister" class="modal fade" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
-      <!-- <div class="modal-header">
-        <h5 class="modal-title">Regístrate y comienza a aprender</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div> -->
-
       <div class="col-12 text-center mt-4 mb-4">
+        <a class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></a>
         <h4 class="modal-title">Crea una cuenta</h4>
         <p>¡Y comienza a aprender!</p>
       </div>
@@ -73,7 +81,7 @@
         <div id="other_register_error"></div>
     
         <div class="mb-3">
-          <label for="name" class="form-label" style="color: #695C5C;">Nombre</label>
+          <label for="name" class="form-label" style="color: #695C5C;">Nombre y apellido</label>
           <input  style="border-color: #cccdcd;" type="text" class="form-control" id="name_register">
           <div id="name_register_error"></div>
         </div>
@@ -84,8 +92,16 @@
         </div>
         <div class="mb-3">
           <label for="birthdate" class="form-label" style="color: #695C5C;">Fecha de nacimiento</label>
-          <input  style="border-color: #cccdcd;" type="date" class="form-control" id="birthdate">
+          <input  style="border-color: #cccdcd;" type="date" class="form-control" id="birthdate_register">
           <div id="birthdate_register_error"></div>
+        </div>
+        <div class="mb-3">
+          <label for="country" class="form-label" style="color: #695C5C;">País</label>
+          <select style="border-color: #cccdcd; height: 43px;" class="form-select" id="country_register">
+            <option selected value="">Seleccione un país</option>
+            <option value="1">Chile</option>
+          </select>
+          <div id="country_register_error"></div>
         </div>
         <div class="mb-3">
           <label for="phone" class="form-label" style="color: #695C5C;">Teléfono</label>
@@ -108,12 +124,21 @@
         <div id="loading_register" style="width: 1rem; height: 1rem; margin-right: 6px; display: none;" class="spinner-border" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
-        Registrar
+        Crear cuenta
         </button>
       </div>
-      <div class="col-12 text-center pb-5 pt-2">
-        ¿Ya tienes una cuenta? <a style="cursor: pointer; background: #FFFFFF; color: #445AFF; border-width: 0px;" class="login_button" data-bs-dismiss="modal" data-bs-target="#modalRegister">Inicia sesión</a>
+
+      <div class="modal-body">
+        <div class="col-12 pt-2" style="padding-left: 32px; padding-right: 32px;">
+          <p style="font-size: 14px;">Al crear una cuenta en Sinapsis Clínica aceptas nuestros <a href="">Terminos y Condiciones</a> y <a href="">Políticas de Privacidad.</a></p>
+        </div>
+        <hr>
+        <div class="col-12 text-center pb-3 pt-2">
+          ¿Ya tienes una cuenta? <a style="cursor: pointer; background: #FFFFFF; color: #445AFF; border-width: 0px;" class="login_button" data-bs-dismiss="modal" data-bs-target="#modalRegister">Inicia sesión</a>
+        </div>
       </div>
+
+
     </div>
   </div>
 </div>

@@ -4,7 +4,7 @@ require(dirname(__FILE__) .'/../../../../wp-load.php');
 $errors = array();
 
 if(sanitize_user($_POST["name"]) == ''){
-    array_push($errors, ['id' => 'name' , 'text' => 'El campo Nombre es requerido.']);
+    array_push($errors, ['id' => 'name' , 'text' => 'El campo Nombre y apellido es requerido.']);
 }else{
     $name   = sanitize_user($_POST["name"]);
 }
@@ -28,8 +28,15 @@ if(esc_attr($_POST["birthdate"]) == ''){
 }
 
 
+if(sanitize_user($_POST["country"]) == ''){
+    array_push($errors, ['id' => 'country' , 'text' => 'El campo país es requerido.']);
+}else{
+    $name   = sanitize_user($_POST["country"]);
+}
+
+
 if(esc_attr($_POST["phone"]) == ''){
-    array_push($errors, ['id' => 'phone' , 'text' => 'El teléfono es requerido']);
+    array_push($errors, ['id' => 'phone' , 'text' => 'El campo teléfono es requerido']);
 }else if(strlen(esc_attr($_POST["phone"])) > 0 && strlen(esc_attr($_POST["phone"])) != 9){
     array_push($errors, ['id' => 'phone' , 'text' => 'El teléfono debe tener 9 dígitos']);
 }else{
@@ -62,7 +69,7 @@ if(count($errors) > 0){
     );
 
 
-    $response = RfCoreUtils::register_user($name , $email , $email , $birthdate , $phone , $password , 'activo' , 1);
+    $response = RfCoreUtils::register_user($name , $email , $email , $birthdate , $country , $phone , $password , 'activo' , 1);
 
     if($response->status == true){
 
@@ -96,9 +103,6 @@ if(count($errors) > 0){
                 'errors' => $errors
             ));
         }
-
-
-
         
 
     }else{

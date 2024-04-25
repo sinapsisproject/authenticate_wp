@@ -9,15 +9,19 @@ jQuery(document).ready( function(){
         
         nombre       = jQuery('#name_register').val();
         email        = jQuery('#email_register').val();
-        birthdate    = jQuery('#birthdate').val();
+        birthdate    = jQuery('#birthdate_register').val();
+        country      = jQuery('#country_register').val();
         phone        = jQuery('#phone_register').val();
         password     = jQuery('#password_register').val();
 
+
+        console.log(country);
 
         data = {
             "name"      : nombre,
             "email"     : email,
             "birthdate" : birthdate,
+            "country"   : country,
             "phone"     : phone,
             "password"  : password
         }
