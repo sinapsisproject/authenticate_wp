@@ -32,7 +32,7 @@
           <div class="row">
             <div class="col-6">
               <input class="form-check-input" type="checkbox" value="" id="rememberme_login">
-              Recuerdame
+              Recuérdame
             </div>
             <div class="col-6 text-end">
               <strong><a style="color: black;" href="">Olvidé mi contraseña</a></strong>
@@ -56,7 +56,7 @@
       </div>
       
       <div class="col-12 text-center mt-1 mb-4">
-        <strong><label>¿No tienes una cuenta? </label></strong> <label class="register_button" id="register_button" data-bs-dismiss="modal" data-bs-target="#modalLogin" style="color: #445AFF; cursor: pointer;"> Registrate</label>
+        <strong><label>¿No tienes una cuenta? </label></strong> <label class="register_button" id="register_button" data-bs-dismiss="modal" data-bs-target="#modalLogin" style="color: #445AFF; cursor: pointer;"> Regístrate</label>
       </div>
       
 
@@ -130,7 +130,7 @@
 
       <div class="modal-body">
         <div class="col-12 pt-2" style="padding-left: 32px; padding-right: 32px;">
-          <p style="font-size: 14px;">Al crear una cuenta en Sinapsis Clínica aceptas nuestros <a href="">Terminos y Condiciones</a> y <a href="">Políticas de Privacidad.</a></p>
+          <p style="font-size: 14px;">Al crear una cuenta en Sinapsis Clínica aceptas nuestros <a href="">Términos y Condiciones</a> y <a href="">Políticas de Privacidad.</a></p>
         </div>
         <hr>
         <div class="col-12 text-center pb-3 pt-2">
