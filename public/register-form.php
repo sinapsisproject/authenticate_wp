@@ -31,7 +31,7 @@ if(esc_attr($_POST["birthdate"]) == ''){
 if(sanitize_user($_POST["country"]) == ''){
     array_push($errors, ['id' => 'country' , 'text' => 'El campo país es requerido.']);
 }else{
-    $name   = sanitize_user($_POST["country"]);
+    $country   = sanitize_user($_POST["country"]);
 }
 
 

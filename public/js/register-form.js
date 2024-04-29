@@ -14,9 +14,6 @@ jQuery(document).ready( function(){
         phone        = jQuery('#phone_register').val();
         password     = jQuery('#password_register').val();
 
-
-        console.log(country);
-
         data = {
             "name"      : nombre,
             "email"     : email,
