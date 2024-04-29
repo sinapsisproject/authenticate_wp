@@ -1,6 +1,6 @@
 jQuery(document).ready( function(){
 
-    jQuery("#register_button").on('click', function(event){
+    jQuery(".register_button").on('click', function(event){
         jQuery('#modalRegister').modal('show');
     })
 

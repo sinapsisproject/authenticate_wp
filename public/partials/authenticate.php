@@ -56,7 +56,7 @@
       </div>
       
       <div class="col-12 text-center mt-1 mb-4">
-        <strong><label>¿No tienes una cuenta? </label></strong> <label id="register_button" data-bs-dismiss="modal" data-bs-target="#modalLogin" style="color: #445AFF; cursor: pointer;"> Registrate</label>
+        <strong><label>¿No tienes una cuenta? </label></strong> <label class="register_button" id="register_button" data-bs-dismiss="modal" data-bs-target="#modalLogin" style="color: #445AFF; cursor: pointer;"> Registrate</label>
       </div>
       
 
@@ -147,5 +147,5 @@
 
 <div class="col-12" style="text-align: right;">
   <a style="background: #FFFFFF; color: #445AFF; border-width: 0px;" class="login_button" type="button" class="btn">Iniciar sesión</a>
-  <button id="register_button" type="button" class="btn">Crear cuenta</button>
+  <button class="register_button" id="register_button" type="button" class="btn">Crear cuenta</button>
 </div>
