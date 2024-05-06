@@ -25,3 +25,38 @@
     font-size: 25px !important;
     cursor: pointer;
 }
+
+.nav-session{
+    display: none;
+}
+.nav-item{
+    padding-right: 10px;
+}
+.nav-link{
+    color: black !important;
+}
+.nav-link:hover{
+    color: #445AFF !important;
+}
+.active{
+    color: #445AFF !important;
+}
+@media (max-width: 991px) {
+    .button-session{
+        display: none;
+    }
+    .nav-session{
+        display: block;
+    }
+    .img-session{
+        display: none;
+    }
+    .navbar-toggler{
+        background: white !important;
+        border-color: white !important;
+    }
+    .navbar-toggler:focus{
+        color: white !important;
+    }
+}
+

@@ -88,12 +88,7 @@ function ajax_enqueue_scripts() {
 }
 
 function shortcode_aunthenticate($atts){
-    if(!is_user_logged_in()){
-        include 'public/partials/authenticate.php'; 
-    }else{
-        include 'public/partials/profile.php';
-        //include 'public/partials/logout.php'; 
-    }
+    include 'public/partials/authenticate.php';
 }
 
 add_shortcode("shortcodeaunthenticate" , "shortcode_aunthenticate");
