@@ -46,10 +46,15 @@ $slug = $post->post_name;
             <?php }else{ ?> 
               <hr>
             <li class="nav-item nav-session">
-            <a id="perfil_button" class="nav-link">Mis cursos</a>
+            <a class="nav-link" href="/mi-perfil">Mis cursos</a>
             </li>
             <li class="nav-item nav-session">
-            <a id="logout_button" class="nav-link">Cerrar sesión</a>
+            <a class="logout_button nav-link" style="display: inline-flex;">
+              <div id="loading_logout" style="width: 1rem; height: 1rem; margin-right: 6px; display: none; margin-top: 3px;" class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+              </div>
+              Cerrar sesión
+            </a>
             </li>
             
             <?php  } ?>
@@ -73,8 +78,8 @@ $slug = $post->post_name;
               </button>
 
               <ul class="dropdown-menu" style="right: 0; left : auto;">
-                <li><a id="perfil_button" class="dropdown-item button-dropdown-profile"><i style="margin-right: 8px;" class="fa-solid fa-user-graduate"></i> Mis cursos</a></li>
-                <li><a id="logout_button" class="dropdown-item button-dropdown-profile"><i style="margin-right: 8px;" class="fa-solid fa-power-off"></i>Cerrar sesión</a></li>
+                <li><a href="/mi-perfil" id="perfil_button" class="dropdown-item button-dropdown-profile"><i style="margin-right: 8px;" class="fa-solid fa-user-graduate"></i> Mis cursos</a></li>
+                <li><a class="logout_button dropdown-item button-dropdown-profile"><i style="margin-right: 8px;" class="fa-solid fa-power-off"></i>Cerrar sesión</a></li>
               </ul>
               
             </div>

@@ -1,8 +1,9 @@
 jQuery(document).ready( function(){
 
 
-    jQuery("#logout_button").on('click', function(){
+    jQuery(".logout_button").on('click', function(){
 
+        console.log("hola mundo");
         jQuery.ajax({
             type : "post",
             url : wp_ajax_sinapsis.ajax_url_logout,
