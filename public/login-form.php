@@ -52,13 +52,14 @@ if(count($errors) > 0){
                         clean_user_cache($user->ID);
                         wp_clear_auth_cookie();
                         wp_set_current_user($user->ID);
-                        wp_set_auth_cookie($user->ID, true, false);
+                        wp_set_auth_cookie($user->ID, false, false);
                         update_user_caches($user->ID);
                        
-                        update_option('tokensinapsisplatform', $response->token);
-                        update_option('idusersinapsisplatform', $response->id);
-                        update_option('namesinapsisplatform' , $response->nombre);
-                        update_option('emailsinapsisplatform', $response->email);
+
+                        update_user_meta($user->ID, 'tokensinapsisplatform', $response->token);
+                        update_user_meta($user->ID, 'idusersinapsisplatform', $response->id);
+                        update_user_meta($user->ID, 'namesinapsisplatform', $response->nombre);
+                        update_user_meta($user->ID, 'emailsinapsisplatform', $response->email);
 
                         wp_send_json(array(
                             'status' => true,
@@ -88,10 +89,10 @@ if(count($errors) > 0){
                         wp_set_auth_cookie($user->ID, false, false);
                         update_user_caches($user->ID);
 
-                       update_option('tokensinapsisplatform', $response->token);
-                       update_option('idusersinapsisplatform', $response->id);
-                       update_option('namesinapsisplatform' , $response->nombre);
-                       update_option('emailsinapsisplatform', $response->email);
+                        update_user_meta($user->ID, 'tokensinapsisplatform', $response->token);
+                        update_user_meta($user->ID, 'idusersinapsisplatform', $response->id);
+                        update_user_meta($user->ID, 'namesinapsisplatform', $response->nombre);
+                        update_user_meta($user->ID, 'emailsinapsisplatform', $response->email);
 
                         wp_send_json(array(
                             'status' => true,

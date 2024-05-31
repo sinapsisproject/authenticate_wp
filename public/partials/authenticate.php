@@ -74,7 +74,7 @@ $slug = $post->post_name;
                 <div id="loading_logout" style="width: 1rem; height: 1rem; margin-right: 6px; display: none;" class="spinner-border" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
-                <i style="margin-right: 8px;" class="fa-solid fa-circle-user"></i> <?php echo get_option('namesinapsisplatform'); ?>
+                <i style="margin-right: 8px;" class="fa-solid fa-circle-user"></i> <?php echo get_user_meta(get_current_user_id(), 'namesinapsisplatform', true); ?>
               </button>
 
               <ul class="dropdown-menu" style="right: 0; left : auto;">

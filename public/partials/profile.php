@@ -5,7 +5,7 @@
         <span class="visually-hidden">Loading...</span>
     </div>
 
-    <i style="margin-right: 8px;" class="fa-solid fa-circle-user"></i> <?php echo get_option('namesinapsisplatform'); ?>
+    <i style="margin-right: 8px;" class="fa-solid fa-circle-user"></i> <?php echo get_user_meta(get_current_user_id(), 'namesinapsisplatform', true); ?>
   </button>
   <ul class="dropdown-menu">
     <li><a id="perfil_button" class="dropdown-item button-dropdown-profile"><i style="margin-right: 8px;" class="fa-solid fa-user-graduate"></i> Mis cursos</a></li>

@@ -85,10 +85,11 @@ if(count($errors) > 0){
             wp_set_auth_cookie($user_id, true, false);
             update_user_caches($user_id);
 
-            update_option('tokensinapsisplatform', $response_login->token);
-            update_option('idusersinapsisplatform', $response_login->id);
-            update_option('namesinapsisplatform', $response_login->nombre);
-            update_option('emailsinapsisplatform', $response_login->email);
+
+            update_user_meta($user_id, 'tokensinapsisplatform', $response_login->token);
+            update_user_meta($user_id, 'idusersinapsisplatform', $response_login->id);
+            update_user_meta($user_id, 'namesinapsisplatform', $response_login->nombre);
+            update_user_meta($user_id, 'emailsinapsisplatform', $response_login->email);
 
             wp_send_json( array(
                 'status' => true,
