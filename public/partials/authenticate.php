@@ -132,7 +132,7 @@ $slug = $post->post_name;
               Recuérdame
             </div>
             <div class="col-7 col-md-6 text-end">
-              <strong><a style="color: black;" href="">Olvidé mi contraseña</a></strong>
+              <strong><a style="color: black;" href="/recuperar-contrasena">Olvidé mi contraseña</a></strong>
             </div>
           </div>
         </div>
